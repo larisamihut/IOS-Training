@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vyg-zl-ZcY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Concentration Theme Chooser View Controller-->
+        <scene sceneID="UgT-kx-ueq">
+            <objects>
+                <viewController id="gXZ-2w-eMo" customClass="ConcentrationThemeChooserViewController" customModule="Concentration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aQz-Qb-4nd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jeN-wG-8su">
+                                <rect key="frame" x="150" y="350" width="114" height="196"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voe-O8-mQY">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Hearts"/>
+                                        <connections>
+                                            <action selector="changeTheme:" destination="gXZ-2w-eMo" eventType="touchUpInside" id="y0F-KN-aK0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3x-Ry-VbT">
+                                        <rect key="frame" x="0.0" y="68" width="114" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Books"/>
+                                        <connections>
+                                            <action selector="changeTheme:" destination="gXZ-2w-eMo" eventType="touchUpInside" id="6hc-FR-jZ5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srw-K2-qQc">
+                                        <rect key="frame" x="0.0" y="136" width="114" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Views"/>
+                                        <connections>
+                                            <action selector="changeTheme:" destination="gXZ-2w-eMo" eventType="touchUpInside" id="JWg-Zp-Mr0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDN-Kp-1iI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C3x-Ry-VbT" firstAttribute="centerX" secondItem="vDN-Kp-1iI" secondAttribute="centerX" id="0HD-bG-y81"/>
+                            <constraint firstItem="jeN-wG-8su" firstAttribute="centerY" secondItem="vDN-Kp-1iI" secondAttribute="centerY" id="TpC-o8-weG"/>
+                            <constraint firstItem="jeN-wG-8su" firstAttribute="centerX" secondItem="vDN-Kp-1iI" secondAttribute="centerX" id="xoJ-Bp-xVG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fDW-VU-kh3"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Choose Theme" id="Cqq-Nq-tqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BC-Qs-WQh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="383"/>
+        </scene>
+        <!--Concentration-->
+        <scene sceneID="pJV-5f-aKa">
+            <objects>
+                <splitViewController id="22a-4T-2In" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Concentration" id="akc-s1-lLt"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="detailViewController" id="mwG-8N-ddg"/>
+                        <segue destination="1Ot-Cg-PrA" kind="relationship" relationship="masterViewController" id="eMm-Wd-hAl"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0TW-yI-g3m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2965" y="992"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="f4a-rR-ksI">
+            <objects>
+                <viewController id="Rnt-id-nwC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bX-1y-iD7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lIa-wH-RGr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="N9G-XQ-MhH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8t-hu-m6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2836" y="173"/>
+        </scene>
+        <!--SetGame-->
+        <scene sceneID="fkf-mt-LAG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SetGame" id="YON-Yz-KIt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="8ZT-si-svb"/>
+                    <navigationItem key="navigationItem" id="sW8-jp-QNX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eiz-sx-MDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2899" y="-296"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CWf-cj-W0n">
+            <objects>
+                <tabBarController id="Vyg-zl-ZcY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5SP-G9-qAo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="22a-4T-2In" kind="relationship" relationship="viewControllers" id="Qeq-CF-hKc"/>
+                        <segue destination="YON-Yz-KIt" kind="relationship" relationship="viewControllers" id="36y-Xu-Bqg"/>
+                        <segue destination="Rnt-id-nwC" kind="relationship" relationship="viewControllers" id="FI4-3P-uBH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIn-hg-has" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4197" y="561"/>
+        </scene>
+        <!--Concentration View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConcentrationViewController" customModule="Concentration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="hYd-MU-sN0">
+                                <rect key="frame" x="26" y="93" width="362" height="393"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="FC4-PB-97p">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2m-LV-Zlh" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ovg-yr-Arc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJB-GP-NBA" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="95" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sye-ah-BjL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfo-hz-Eck" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="189.5" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mSI-4Q-3aJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-Da-ONc" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="284.5" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JoC-PN-81d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-dP-wJj">
+                                        <rect key="frame" x="0.0" y="107" width="362" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1s-oz-JY2" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41e-J2-cBd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wq-3W-ZKZ" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="95" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbH-NU-Tv6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBN-rj-H4A" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="189.5" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dcd-Nl-OsF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23M-Ad-De3" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="284.5" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MfD-Qm-qBu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="V0I-sX-Fo7">
+                                        <rect key="frame" x="0.0" y="214" width="362" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hz1-dF-vL4" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaS-Ww-Sz2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5m-4a-XcG" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="95" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJC-oY-tuN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qt-h1-tcN" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="189.5" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hC-8Y-Z4q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYB-GE-Nzt" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="284.5" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltI-3a-Afr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBe-HA-MCw">
+                                        <rect key="frame" x="0.0" y="321" width="362" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5u-UC-MZE" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZcQ-Pm-bQA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-jk-Xox" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="95" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qM-2l-499"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwT-r0-yby" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="189.5" y="0.0" width="78" height="72"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g31-1N-F7U"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPt-ez-s7Q" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="284.5" y="0.0" width="77.5" height="72"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    <color key="titleShadowColor" systemColor="systemOrangeColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ke-Jh-jre"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrF-rU-KsY">
+                                <rect key="frame" x="128.5" y="756" width="157" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="didTapStartNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J3q-Qq-0l9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3v-zg-tG7">
+                                <rect key="frame" x="26" y="674" width="122.5" height="48"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Flips: 0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="40"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I06-CZ-Bsb">
+                                <rect key="frame" x="247" y="674" width="141" height="48"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Score: 0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="40"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j3v-zg-tG7" firstAttribute="baseline" secondItem="I06-CZ-Bsb" secondAttribute="baseline" priority="750" id="1s5-6q-OZ4"/>
+                            <constraint firstItem="lrF-rU-KsY" firstAttribute="top" secondItem="j3v-zg-tG7" secondAttribute="bottom" constant="34" id="6qG-fK-Apk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hYd-MU-sN0" secondAttribute="trailing" constant="26" id="7cL-ou-hIT"/>
+                            <constraint firstItem="I06-CZ-Bsb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j3v-zg-tG7" secondAttribute="trailing" constant="8" symbolic="YES" id="96U-f5-9pV"/>
+                            <constraint firstItem="hYd-MU-sN0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="F54-7S-uzO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I06-CZ-Bsb" secondAttribute="trailing" constant="26" id="U9K-MP-GgE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lrF-rU-KsY" secondAttribute="bottom" constant="5" id="a2e-ow-1ST"/>
+                            <constraint firstItem="lrF-rU-KsY" firstAttribute="centerX" secondItem="hYd-MU-sN0" secondAttribute="centerX" id="dKt-Jx-8hn"/>
+                            <constraint firstItem="hYd-MU-sN0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="m3F-2t-J5r"/>
+                            <constraint firstItem="j3v-zg-tG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="pzh-cY-tqg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kFh-gG-1ky"/>
+                    <connections>
+                        <outlet property="flipCountLabel" destination="j3v-zg-tG7" id="a1f-gO-d8l"/>
+                        <outlet property="scoreCountLabel" destination="I06-CZ-Bsb" id="VDH-nf-v9H"/>
+                        <outletCollection property="cardButtons" destination="wJB-GP-NBA" collectionClass="NSMutableArray" id="DB6-pN-vSj"/>
+                        <outletCollection property="cardButtons" destination="5bN-Da-ONc" collectionClass="NSMutableArray" id="3ut-zk-bcw"/>
+                        <outletCollection property="cardButtons" destination="Vfo-hz-Eck" collectionClass="NSMutableArray" id="swk-yB-NGd"/>
+                        <outletCollection property="cardButtons" destination="S2m-LV-Zlh" collectionClass="NSMutableArray" id="qtk-33-1Cg"/>
+                        <outletCollection property="cardButtons" destination="EBN-rj-H4A" collectionClass="NSMutableArray" id="PhP-Rr-Sew"/>
+                        <outletCollection property="cardButtons" destination="1Wq-3W-ZKZ" collectionClass="NSMutableArray" id="kcx-jJ-Tcr"/>
+                        <outletCollection property="cardButtons" destination="23M-Ad-De3" collectionClass="NSMutableArray" id="j5Y-cf-gSt"/>
+                        <outletCollection property="cardButtons" destination="F1s-oz-JY2" collectionClass="NSMutableArray" id="zFj-Qz-Hx2"/>
+                        <outletCollection property="cardButtons" destination="Hz1-dF-vL4" collectionClass="NSMutableArray" id="8IL-Zq-qR3"/>
+                        <outletCollection property="cardButtons" destination="v5m-4a-XcG" collectionClass="NSMutableArray" id="9pl-nM-Rvl"/>
+                        <outletCollection property="cardButtons" destination="RYB-GE-Nzt" collectionClass="NSMutableArray" id="Neh-lc-1YE"/>
+                        <outletCollection property="cardButtons" destination="8qt-h1-tcN" collectionClass="NSMutableArray" id="ic4-zj-56x"/>
+                        <outletCollection property="cardButtons" destination="LwT-r0-yby" collectionClass="NSMutableArray" id="TsI-3x-vR7"/>
+                        <outletCollection property="cardButtons" destination="t8x-jk-Xox" collectionClass="NSMutableArray" id="1iR-KZ-3Yp"/>
+                        <outletCollection property="cardButtons" destination="UPt-ez-s7Q" collectionClass="NSMutableArray" id="Nyk-K3-FYY"/>
+                        <outletCollection property="cardButtons" destination="V5u-UC-MZE" collectionClass="NSMutableArray" id="oon-HI-qJD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="1209"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EBD-FW-RHD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ot-Cg-PrA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QKN-FU-U5c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gXZ-2w-eMo" kind="relationship" relationship="rootViewController" id="aU0-kj-vcz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uw2-Qj-RJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1252" y="382"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mwG-8N-ddg"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
